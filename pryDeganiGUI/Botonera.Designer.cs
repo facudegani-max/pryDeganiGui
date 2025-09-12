@@ -59,9 +59,8 @@
             lblNombres.BorderStyle = BorderStyle.FixedSingle;
             lblNombres.Location = new Point(173, 107);
             lblNombres.Name = "lblNombres";
-            lblNombres.Size = new Size(115, 17);
+            lblNombres.Size = new Size(2, 17);
             lblNombres.TabIndex = 3;
-            lblNombres.Text = "Ingrese los nombres";
             lblNombres.Click += lbl1_Click;
             // 
             // Botonera

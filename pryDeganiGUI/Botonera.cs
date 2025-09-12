@@ -63,7 +63,6 @@ namespace pryDeganiGui
 
         private void lbl1_Click(object sender, EventArgs e)
         {
-            lblNombres.Text = Nombre[i];
         }
     }
 }
