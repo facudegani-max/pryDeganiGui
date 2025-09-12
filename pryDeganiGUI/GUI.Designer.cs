@@ -1,6 +1,6 @@
 ﻿namespace pryDeganiGui
 {
-    partial class FrmControles
+    partial class GUI
     {
         /// <summary>
         ///  Required designer variable.

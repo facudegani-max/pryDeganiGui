@@ -1,8 +1,8 @@
 namespace pryDeganiGui
 {
-    public partial class FrmControles : Form
+    public partial class GUI : Form
     {
-        public FrmControles()
+        public GUI()
         {
             InitializeComponent();
         }
