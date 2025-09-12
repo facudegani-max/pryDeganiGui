@@ -39,16 +39,18 @@
             btnBotonera.TabIndex = 0;
             btnBotonera.Text = "Abrir botonera";
             btnBotonera.UseVisualStyleBackColor = true;
+            btnBotonera.Click += btnBotonera_Click;
             // 
-            // FrmControles
+            // GUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
             Controls.Add(btnBotonera);
-            Name = "FrmControles";
+            Name = "GUI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Control de interfaz grafica";
+            Load += GUI_Load;
             ResumeLayout(false);
         }
 

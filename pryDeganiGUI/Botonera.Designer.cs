@@ -28,78 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnAgregar = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            lbl1 = new Label();
-            txtNombres = new TextBox();
+            btnAtras = new Button();
+            btnAdelante = new Button();
+            lblNombres = new Label();
             SuspendLayout();
             // 
-            // btnAgregar
+            // btnAtras
             // 
-            btnAgregar.Location = new Point(192, 138);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(75, 23);
-            btnAgregar.TabIndex = 0;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
+            btnAtras.Location = new Point(152, 150);
+            btnAtras.Name = "btnAtras";
+            btnAtras.Size = new Size(75, 23);
+            btnAtras.TabIndex = 1;
+            btnAtras.Text = "<";
+            btnAtras.UseVisualStyleBackColor = true;
+            btnAtras.Click += btnAtras_Click;
             // 
-            // button2
+            // btnAdelante
             // 
-            button2.Location = new Point(139, 198);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "<";
-            button2.UseVisualStyleBackColor = true;
+            btnAdelante.Location = new Point(233, 150);
+            btnAdelante.Name = "btnAdelante";
+            btnAdelante.Size = new Size(75, 23);
+            btnAdelante.TabIndex = 2;
+            btnAdelante.Text = ">";
+            btnAdelante.UseVisualStyleBackColor = true;
+            btnAdelante.Click += btnAdelante_Click;
             // 
-            // button3
+            // lblNombres
             // 
-            button3.Location = new Point(242, 198);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = ">";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // lbl1
-            // 
-            lbl1.AutoSize = true;
-            lbl1.Location = new Point(171, 63);
-            lbl1.Name = "lbl1";
-            lbl1.Size = new Size(113, 15);
-            lbl1.TabIndex = 3;
-            lbl1.Text = "Ingrese los nombres";
-            // 
-            // txtNombres
-            // 
-            txtNombres.Location = new Point(171, 92);
-            txtNombres.Name = "txtNombres";
-            txtNombres.Size = new Size(113, 23);
-            txtNombres.TabIndex = 4;
+            lblNombres.AutoSize = true;
+            lblNombres.BorderStyle = BorderStyle.FixedSingle;
+            lblNombres.Location = new Point(173, 107);
+            lblNombres.Name = "lblNombres";
+            lblNombres.Size = new Size(115, 17);
+            lblNombres.TabIndex = 3;
+            lblNombres.Text = "Ingrese los nombres";
+            lblNombres.Click += lbl1_Click;
             // 
             // Botonera
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
-            Controls.Add(txtNombres);
-            Controls.Add(lbl1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(btnAgregar);
+            Controls.Add(lblNombres);
+            Controls.Add(btnAdelante);
+            Controls.Add(btnAtras);
             Name = "Botonera";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Botonera";
+            Load += Botonera_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button btnAgregar;
-        private Button button2;
-        private Button button3;
-        private Label lbl1;
-        private TextBox txtNombres;
+        private Button btnAtras;
+        private Button btnAdelante;
+        private Label lblNombres;
     }
 }
