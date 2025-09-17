@@ -27,7 +27,7 @@ namespace pryDeganiGui
             Nombre[2] = "Ana";
 
             lblNombres.Text = Nombre[i];
-            
+
             i++;
 
         }
@@ -36,33 +36,80 @@ namespace pryDeganiGui
         {
 
             i++;
-            if (i < 3)
+
+            if (Nombre.Length > i)
             {
                 lblNombres.Text = Nombre[i];
+
+                if (i > 0)
+                {
+                    btnAtras.Enabled = true;   
+                }
+                if ((i + 1) == Nombre.Length) 
+                {
+                    btnAdelante.Enabled = false;
+                }     
             }
-            else
-            {
-                MessageBox.Show("No hay mas nombres para mostrar");
-            }
+
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
 
             i--;
-            if (i >= 0)
+
+            if (Nombre.Length > i)
             {
                 lblNombres.Text = Nombre[i];
+
+                if (i == 0)
+                {
+                    btnAtras.Enabled = false;
+                }
+                if (i > 0)
+                {
+                    btnAdelante.Enabled = true;
+                }
             }
-            else
-            {
-                MessageBox.Show("No hay mas nombres para mostrar");
-            }
+ 
 
         }
 
         private void lbl1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnUltimo_Click(object sender, EventArgs e)
+        {
+            lblNombres.Text = Nombre[3-1];
+
+            if (i > 0)
+            {
+                btnAtras.Enabled = true;
+            }
+            if ((i + 1) == Nombre.Length)
+            {
+                btnAdelante.Enabled = false;
+            }
+        }
+
+        private void btnPrimero_Click(object sender, EventArgs e)
+        {
+            lblNombres.Text = Nombre[0];
+
+            if (i == 0)
+            {
+                btnAtras.Enabled = false;
+            }
+            if (i > 0)
+            {
+                btnAdelante.Enabled = true;
+            }
+        }
+
+        private void lblBienvenido_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

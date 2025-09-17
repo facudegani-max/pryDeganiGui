@@ -33,18 +33,21 @@
             // 
             // btnBotonera
             // 
+            btnBotonera.BackColor = Color.SpringGreen;
+            btnBotonera.FlatStyle = FlatStyle.Popup;
             btnBotonera.Location = new Point(41, 36);
             btnBotonera.Name = "btnBotonera";
             btnBotonera.Size = new Size(118, 23);
             btnBotonera.TabIndex = 0;
-            btnBotonera.Text = "Abrir botonera";
-            btnBotonera.UseVisualStyleBackColor = true;
+            btnBotonera.Text = "Botonera";
+            btnBotonera.UseVisualStyleBackColor = false;
             btnBotonera.Click += btnBotonera_Click;
             // 
             // GUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Info;
             ClientSize = new Size(484, 461);
             Controls.Add(btnBotonera);
             Name = "GUI";
