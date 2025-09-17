@@ -48,7 +48,11 @@ namespace pryDeganiGui
                 if ((i + 1) == Nombre.Length) 
                 {
                     btnAdelante.Enabled = false;
-                }     
+                }
+                if (i >= 2)
+                {
+                    btnUltimo.Enabled = false;
+                }
             }
 
         }
@@ -65,10 +69,13 @@ namespace pryDeganiGui
                 if (i == 0)
                 {
                     btnAtras.Enabled = false;
+                   
                 }
                 if (i > 0)
                 {
                     btnAdelante.Enabled = true;
+                    btnUltimo.Enabled = true;
+
                 }
             }
  
