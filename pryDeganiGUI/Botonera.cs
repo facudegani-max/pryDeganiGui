@@ -17,7 +17,7 @@ namespace pryDeganiGui
             InitializeComponent();
         }
 
-        string[] Nombre = new string[3];
+        public string[] Nombre = new string[3];
         int i = 0;
 
         private void Botonera_Load(object sender, EventArgs e)

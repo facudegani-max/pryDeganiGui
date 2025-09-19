@@ -29,19 +29,30 @@
         private void InitializeComponent()
         {
             btnBotonera = new Button();
+            lstbox1 = new ListBox();
             SuspendLayout();
             // 
             // btnBotonera
             // 
             btnBotonera.BackColor = Color.SpringGreen;
             btnBotonera.FlatStyle = FlatStyle.Popup;
-            btnBotonera.Location = new Point(41, 36);
+            btnBotonera.Location = new Point(12, 12);
             btnBotonera.Name = "btnBotonera";
-            btnBotonera.Size = new Size(118, 23);
+            btnBotonera.Size = new Size(460, 63);
             btnBotonera.TabIndex = 0;
             btnBotonera.Text = "Botonera";
             btnBotonera.UseVisualStyleBackColor = false;
             btnBotonera.Click += btnBotonera_Click;
+            // 
+            // lstbox1
+            // 
+            lstbox1.FormattingEnabled = true;
+            lstbox1.ItemHeight = 15;
+            lstbox1.Location = new Point(12, 81);
+            lstbox1.Name = "lstbox1";
+            lstbox1.Size = new Size(460, 94);
+            lstbox1.TabIndex = 1;
+            lstbox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // GUI
             // 
@@ -49,6 +60,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
             ClientSize = new Size(484, 461);
+            Controls.Add(lstbox1);
             Controls.Add(btnBotonera);
             Name = "GUI";
             StartPosition = FormStartPosition.CenterScreen;
@@ -60,5 +72,6 @@
         #endregion
 
         private Button btnBotonera;
+        private ListBox lstbox1;
     }
 }
