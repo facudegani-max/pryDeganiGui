@@ -22,64 +22,34 @@ namespace pryDeganiGui
 
         private void Botonera_Load(object sender, EventArgs e)
         {
-            Nombre[0] = "Paula";
-            Nombre[1] = "Juan";
-            Nombre[2] = "Ana";
+            Nombre[0] = "AlfonsoPro";
+            Nombre[1] = "Bauti";
+            Nombre[2] = "C#";
 
             lblNombres.Text = Nombre[i];
-
-            i++;
 
         }
 
         private void btnAdelante_Click(object sender, EventArgs e)
         {
-
-            i++;
-
-            if (Nombre.Length > i)
+            if (i < Nombre.Length - 1) // Aseguramos que no estamos fuera de los límites
             {
+                i++;
                 lblNombres.Text = Nombre[i];
-
-                if (i > 0)
-                {
-                    btnAtras.Enabled = true;   
-                }
-                if ((i + 1) == Nombre.Length) 
-                {
-                    btnAdelante.Enabled = false;
-                }
-                if (i >= 2)
-                {
-                    btnUltimo.Enabled = false;
-                }
+                ActualizarEstadoBotones();
             }
+            
 
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-
-            i--;
-
-            if (Nombre.Length > i)
+            if (i > 0) // Aseguramos que no estamos fuera de los límites
             {
+                i--;
                 lblNombres.Text = Nombre[i];
-
-                if (i == 0)
-                {
-                    btnAtras.Enabled = false;
-                   
-                }
-                if (i > 0)
-                {
-                    btnAdelante.Enabled = true;
-                    btnUltimo.Enabled = true;
-
-                }
+                ActualizarEstadoBotones();
             }
- 
-
         }
 
         private void lbl1_Click(object sender, EventArgs e)
@@ -88,30 +58,26 @@ namespace pryDeganiGui
 
         private void btnUltimo_Click(object sender, EventArgs e)
         {
-            lblNombres.Text = Nombre[3-1];
-
-            if (i > 0)
-            {
-                btnAtras.Enabled = true;
-            }
-            if ((i + 1) == Nombre.Length)
-            {
-                btnAdelante.Enabled = false;
-            }
+            i = Nombre.Length - 1; // Nos movemos al último índice
+            lblNombres.Text = Nombre[i];
+            ActualizarEstadoBotones();
         }
 
         private void btnPrimero_Click(object sender, EventArgs e)
         {
-            lblNombres.Text = Nombre[0];
+            i = 0; // Nos movemos al primer índice
+            lblNombres.Text = Nombre[i];
+            ActualizarEstadoBotones();
 
-            if (i == 0)
-            {
-                btnAtras.Enabled = false;
-            }
-            if (i > 0)
-            {
-                btnAdelante.Enabled = true;
-            }
+        }
+
+        private void ActualizarEstadoBotones()
+        {
+            // Habilitar/deshabilitar botones según la posición actual
+            btnAtras.Enabled = i > 0;
+            btnPrimero.Enabled = i > 0;
+            btnAdelante.Enabled = i < Nombre.Length - 1;
+            btnUltimo.Enabled = i < Nombre.Length - 1;
         }
 
         private void lblBienvenido_Click(object sender, EventArgs e)
